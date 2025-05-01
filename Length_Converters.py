@@ -13,8 +13,8 @@ conversion_factors_to_meter = {
     2:  1000,     # Kilometer
     3:  0.01,     # Centimeter
     4:  0.001,    # Millimeter
-    5:  1e-6,     # Micrometer
-    6:  1e-9,     # Nanometer
+    5:  1 / 1000000,     # Micrometer
+    6:  1 / 1000000000,     # Nanometer
     7:  1609.344, # Mile
     8:  0.9144,   # Yard
     9:  0.3048,   # Foot
@@ -56,7 +56,14 @@ to_unit = validate_unit("Select the unit of length you want to convert TO (1-11)
 def convert_length(value, from_unit, to_unit):
     value_in_meters = value * conversion_factors_to_meter[from_unit]
     converted_value = value_in_meters / conversion_factors_to_meter[to_unit]
-    return round(converted_value, 10)
+    if converted_value >= 1e6:
+        return round(converted_value, 0)  # Round to integer if huge
+    elif converted_value >= 1:
+        return round(converted_value, 4)  # Normal numbers
+    elif converted_value >= 1e-3:
+        return round(converted_value, 8)  # Small but visible
+    else:
+        return format(converted_value, ".12g") 
 
 # Perform conversion and show result
 converted = convert_length(num_from, from_unit, to_unit)

@@ -56,7 +56,7 @@ to_unit = validate_unit("Select the unit of area you want to convert TO (1-11): 
 def convert_area(value, from_unit, to_unit):
     value_in_m2 = value * conversion_factors_to_m_2[from_unit]
     converted_value = value_in_m2 / conversion_factors_to_m_2[to_unit]
-    return round(converted_value, 4)
+    return converted_value
 
 # Perform conversion and show result
 converted = convert_area(num_from, from_unit, to_unit)
