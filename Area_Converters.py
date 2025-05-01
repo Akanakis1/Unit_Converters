@@ -4,21 +4,22 @@ print("**************************")
 
 # Display unit options
 print("Available Units:")
-print(f"1:  Square Meter\n2:  Square Kilometer\n3:  Square Centimeter\n4:  Square Millimeter\n5:  Square Micrometer\n6:  Hectare\n7:  Square Mile\n8:  Square Yard\n9:  Square Foot\n10: Square Inch\n11: Acre\n")
+print(f"1:  Square Meter\n2:  Square Kilometer\n3:  Square Centimeter\n4:  Square Millimeter\n5:  Square Micrometer")
+print("6:  Hectare\n7:  Square Mile\n8:  Square Yard\n9:  Square Foot\n10: Square Inch\n11: Acre\n")
 
 # Conversion TO Square Meter
 conversion_factors_to_m_2 = {
-    1: 1,               # Square Meter
-    2: 0.000001,        # Square Kilometer
-    3: 10000,           # Square Centimeter
-    4: 1000000,         # Square Millimeter
-    5: 1000000000000,   # Square Micrometer
-    6: 0.0001,          # Hectare
-    7: 3.861018768E-7,  # Square Mile
-    8: 1.1959900463,    # Square Yard
-    9: 10.763910417,    # Square Foot
-    10: 1550.0031,      # Square Inch
-    11: 0.0002471054    # Acre
+    1:  1,                # Square Meter
+    2:  1e6,              # Square Kilometer
+    3:  0.0001,           # Square Centimeter
+    4:  1e-6,             # Square Millimeter
+    5:  1e-12,            # Square Micrometer
+    6:  10000,            # Hectare
+    7:  2_589_988.110336, # Square Mile
+    8:  0.83612736,       # Square Yard
+    9:  0.09290304,       # Square Foot
+    10: 0.00064516,       # Square Inch
+    11: 4046.8564224      # Acre
 }
 
 unit_names = {
@@ -53,14 +54,8 @@ num_from = validate_area("Enter the area to be converted: ")
 to_unit = validate_unit("Select the unit of area you want to convert TO (1-11): ")
 
 def convert_area(value, from_unit, to_unit):
-    if from_unit != 1:
-        value_in_meters = value / conversion_factors_to_m_2[from_unit]
-        converted_value = value_in_meters / conversion_factors_to_m_2[to_unit]
-    else:
-        # Convert from source unit to meters
-        value_in_meters = value * conversion_factors_to_m_2[from_unit]
-        # Convert from meters to target unit
-        converted_value = value_in_meters / conversion_factors_to_m_2[to_unit]
+    value_in_m2 = value * conversion_factors_to_m_2[from_unit]
+    converted_value = value_in_m2 / conversion_factors_to_m_2[to_unit]
     return round(converted_value, 4)
 
 # Perform conversion and show result

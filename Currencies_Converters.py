@@ -1,4 +1,4 @@
-from currency_converter import CurrencyConverter
+from forex_python.converter import CurrencyRates
 print("********************************")
 print("**Unit_Converterers_Currencies**")
 print("********************************")
