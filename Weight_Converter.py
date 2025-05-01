@@ -9,16 +9,16 @@ print("6:  Short Ton\n7:  Pound\n8:  Ounce\n9:  Carrat\n10: Atomic Mass Unit\n")
 
 # Conversion TO Kilogram
 conversion_factors_to_kg = {
-    1:  1,              # Kilogram
-    2:  1000,           # Gram
-    3:  1000000,        # Milligram
-    4:  0.001,          # Metric Ton
-    5:  0.0009842073,   # Long Ton
-    6:  0.0011023122,   # Short Ton
-    7:  2.2046244202,   # Pound
-    8:  35.273990723,   # Ounce
-    9:  5000,           # Carrat
-    10: 6.022136652E+26 # Atomic Mass Unit
+    1:  1,                # Kilogram
+    2:  0.001,            # Gram
+    3:  0.000001,         # Milligram
+    4:  1000,             # Metric Ton
+    5:  1016.0469088,     # Long Ton
+    6:  907.18474,        # Short Ton
+    7:  0.45359237,       # Pound
+    8:  0.028349523125,   # Ounce
+    9:  0.0002,           # Carrat
+    10: 1.66053906660e-27 # Atomic Mass Unit
 }
 
 unit_names = {
@@ -52,15 +52,9 @@ num_from = validate_weight("Enter the Weight to be converted: ")
 to_unit = validate_unit("Select the unit of Weight you want to convert TO (1-10): ")
 
 def convert_weight(value, from_unit, to_unit):
-    if from_unit != 1:
-        value_in_kg = value / conversion_factors_to_kg[from_unit]
-        print(f"Converted {value} {unit_names[from_unit]} to {value_in_kg} Kilograms.")
-        converted_value = value_in_kg * conversion_factors_to_kg[to_unit]
-    else:
-        value_in_kg = value * conversion_factors_to_kg[from_unit]
-        print(f"Converted {value} {unit_names[from_unit]} to {value_in_kg} Kilograms.")
-        converted_value = value_in_kg * conversion_factors_to_kg[to_unit]
-    return round(converted_value, 4)
+    value_in_kg = value * conversion_factors_to_kg[from_unit]
+    converted_value = value_in_kg / conversion_factors_to_kg[to_unit]
+    return converted_value
 
 # Perform conversion and show result
 converted = convert_weight(num_from, from_unit, to_unit)

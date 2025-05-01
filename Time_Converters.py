@@ -56,7 +56,14 @@ to_unit = validate_unit("Select the unit of time you want to convert TO (1-11): 
 def convert_time(value, from_unit, to_unit):
     value_in_sec = value * conversion_factors_to_sec[from_unit]
     converted_value = value_in_sec / conversion_factors_to_sec[to_unit]
-    return round(converted_value, 6)
+    if converted_value < 1e-6:
+        return round(converted_value, 12)
+    elif converted_value < 1:
+        return round(converted_value, 10)
+    elif converted_value < 1e6:
+        return round(converted_value, 6)
+    else:
+        return round(converted_value, 0)
 
 # Perform conversion and show result
 converted = convert_time(time_from, from_unit, to_unit)

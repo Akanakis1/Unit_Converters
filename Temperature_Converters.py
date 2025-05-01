@@ -22,9 +22,15 @@ def validate_temperature(prompt):
     while True:
         try:
             temp_val = float(input(prompt))
+            if from_unit == 1 and temp_val <=-273.15:
+                raise ValueError(f"Celsius can't be below -273.15°.")
+            elif from_unit == 2 and temp_val <=0:
+                raise ValueError(f"Kelvin can't be below 0°.")
+            elif from_unit == 3 and temp_val <=-459.67:
+                raise ValueError(f"Fahrenheit can't be below -459.67°")
             return temp_val
-        except ValueError:
-            print("Invalid input. Please enter a valid number.")
+        except ValueError as e:
+            print(e)
 
 from_unit = validate_unit("Select the unit of temperature you want to convert FROM (1-3): ")
 temperature_from = validate_temperature("Enter the temperature to be converted: ")
