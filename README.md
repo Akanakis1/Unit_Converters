@@ -1,40 +1,42 @@
-# Python Mini Projects (CLI)
+# Unit & Currency Converters (Python CLI)
 
-A small collection of beginner-friendly **command-line Python projects** built to practice core programming concepts: input validation, control flow, loops, and basic game logic. The repository currently includes a calculator and two interactive games.
+A collection of simple, modular **Python command-line (CLI) converters** for common measurement units and currencies.  
+Each script is interactive (menu + input validation) and designed to practice clean logic, conversions, and user-friendly prompts.
 
-## Projects
+## Included Converters
 
-### 1) Calculator
-**File:** `Calculator.py`
-A simple calculator that supports:
-- Addition (`+`), subtraction (`-`), multiplication (`*`), division (`/`)
-- Input validation for numeric values
-- Division-by-zero handling
-- Rounded output (4 decimals)
+- **Area Converter** — `Area_Converters.py`
+  Converts between m², km², cm², mm², µm², hectare, square mile, yard, foot, inch, acre.
 
-### 2) Number Guessing Game
-**File:** `Number_Guessing_Game.py`
-A guessing game where:
-- The program selects a random number between 0 and 100
-- The player has **10 attempts**
-- The player can quit anytime by typing `exit`.
-- Feedback is provided after each guess (too high/too low)
+- **Length Converter** — `Length_Converters.py`
+  Converts between meter, kilometer, centimeter, millimeter, micrometer, nanometer, mile, yard, foot, inch, light year.
 
-### 3) Rock, Paper, Scissors
-**File:** `Rock_Paper_Scissors.py`
-A classic rock-paper-scissors game versus the computer:
-- Validates user input (rock/paper/scissors)
-- Tracks score until you reach **+5** (win) or **-3** (lose)
+- **Temperature Converter** — `Temperature_Converters.py`
+  Converts between Celsius, Kelvin, and Fahrenheit (includes absolute-zero validation).
 
-## Getting Started
+- **Time Converter** — `Time_Converters.py`
+  Converts between seconds and larger/smaller time units (ms, µs, ns, ps, minutes, hours, days, weeks, months, years).
+
+- **Weight Converter** — `Weight_Converter.py` 
+  Converts between kg, g, mg, metric ton, long ton, short ton, lb, oz, carat, and atomic mass unit.
+
+- **Currency Converter** — `Currencies_Converters.py` 
+  Converts between multiple currencies (USD, EUR, GBP, JPY, etc.). Uses an external FX library for exchange rates.
+
+## How to Run
 
 ### Requirements
-- Python 3.8+ (works with standard library only)
+- Python 3.8+
+- Standard library only for unit converters
+- Currency converter requires an external package
 
-### Run a project
+### Run a converter
 From the repository folder:
 
 ```bash
-python Calculator.py
-python Number_Guessing_Game.py
-python Rock_Paper_Scissors.py
+python Area_Converters.py
+python Length_Converters.py
+python Temperature_Converters.py
+python Time_Converters.py
+python Weight_Converter.py
+python Currencies_Converters.py
