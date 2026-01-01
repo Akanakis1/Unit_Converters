@@ -1,14 +1,40 @@
-# Unit Conversion Scripts
+# Python Mini Projects (CLI)
 
-This repository contains a series of modular Python scripts for converting various units of measurement and currency.
+A small collection of beginner-friendly **command-line Python projects** built to practice core programming concepts: input validation, control flow, loops, and basic game logic. The repository currently includes a calculator and two interactive games.
 
-## The scripts include:
+## Projects
 
-- **Area_Converters.py**: Converts between different units of area measurement.
-- **Length_Converters.py**: Provides functionality to convert between different units of length.
-- **Temperature_Converters.py**: Includes temperature conversion between popular units like Celsius, Fahrenheit, and Kelvin.
-- **Time_Converters.py**: Converts time units such as seconds, minutes, hours, and more.
-- **Weight_Converter.py**: Allows conversion between various weight units, including kilograms, grams, pounds, etc.
-- **Currencies_Converters.py**: Converts monetary values between different currencies using real-time exchange rates (via the `CurrencyConverter` package).
+### 1) Calculator
+**File:** `Calculator.py` :contentReference[oaicite:4]{index=4}  
+A simple calculator that supports:
+- Addition (`+`), subtraction (`-`), multiplication (`*`), division (`/`)
+- Input validation for numeric values
+- Division-by-zero handling
+- Rounded output (4 decimals)
 
-Each script is designed to be modular, user-friendly, and easy to integrate into any Python project requiring unit or currency conversion functionality. These files are part of the initial commit, with more updates and enhancements planned.
+### 2) Number Guessing Game
+**File:** `Number_Guessing_Game.py` :contentReference[oaicite:5]{index=5}  
+A guessing game where:
+- The program selects a random number between 0 and 100
+- The player has **10 attempts**
+- The player can quit anytime by typing `exit`.
+- Feedback is provided after each guess (too high/too low)
+
+### 3) Rock, Paper, Scissors
+**File:** `Rock_Paper_Scissors.py` :contentReference[oaicite:6]{index=6}  
+A classic rock-paper-scissors game versus the computer:
+- Validates user input (rock/paper/scissors)
+- Tracks score until you reach **+5** (win) or **-3** (lose)
+
+## Getting Started
+
+### Requirements
+- Python 3.8+ (works with standard library only)
+
+### Run a project
+From the repository folder:
+
+```bash
+python Calculator.py
+python Number_Guessing_Game.py
+python Rock_Paper_Scissors.py
