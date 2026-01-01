@@ -5,7 +5,7 @@ A small collection of beginner-friendly **command-line Python projects** built t
 ## Projects
 
 ### 1) Calculator
-**File:** `Calculator.py` :contentReference[oaicite:4]{index=4}  
+**File:** `Calculator.py`
 A simple calculator that supports:
 - Addition (`+`), subtraction (`-`), multiplication (`*`), division (`/`)
 - Input validation for numeric values
@@ -13,7 +13,7 @@ A simple calculator that supports:
 - Rounded output (4 decimals)
 
 ### 2) Number Guessing Game
-**File:** `Number_Guessing_Game.py` :contentReference[oaicite:5]{index=5}  
+**File:** `Number_Guessing_Game.py`
 A guessing game where:
 - The program selects a random number between 0 and 100
 - The player has **10 attempts**
@@ -21,7 +21,7 @@ A guessing game where:
 - Feedback is provided after each guess (too high/too low)
 
 ### 3) Rock, Paper, Scissors
-**File:** `Rock_Paper_Scissors.py` :contentReference[oaicite:6]{index=6}  
+**File:** `Rock_Paper_Scissors.py`
 A classic rock-paper-scissors game versus the computer:
 - Validates user input (rock/paper/scissors)
 - Tracks score until you reach **+5** (win) or **-3** (lose)
