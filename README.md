@@ -50,7 +50,7 @@ Includes validation for physically invalid inputs (e.g. below absolute zero).
 
 ### Time Converter — `Time_Converters.py`
 Converts between:
-- seconds, milliseconds, microseconds, nanoseconds
+- seconds, milliseconds, microseconds, nanoseconds, picoseconds
 - minutes, hours, days, weeks, months, years
 
 ---
