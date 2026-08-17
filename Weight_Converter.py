@@ -17,13 +17,13 @@ conversion_factors_to_kg = {
     6:  907.18474,        # Short Ton
     7:  0.45359237,       # Pound
     8:  0.028349523125,   # Ounce
-    9:  0.0002,           # Carrat
+    9:  0.0002,           # Carat
     10: 1.66053906660e-27 # Atomic Mass Unit
 }
 
 unit_names = {
     1: "Kilogram", 2: "Gram", 3: "Milligram", 4: "Metric Ton", 5: "Long Ton",
-    6: "Short Ton", 7: "Pound", 8: "Ounce", 9: "Carrat", 10: "Atomic Mass Unit"
+    6: "Short Ton", 7: "Pound", 8: "Ounce", 9: "Carat", 10: "Atomic Mass Unit"
 }
 
 def validate_weight(prompt):
