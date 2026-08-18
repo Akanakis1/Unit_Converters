@@ -45,11 +45,11 @@ amount = validate_amount("Enter the amount to be converted: ")
 from_currency = unit_names[from_unit_idx]
 to_currency = unit_names[to_unit_idx]
 
-c = CurrencyConverter(decimal=True)
+c = CurrencyRates()
 
 # Perform the conversion
 try:
-    converted = c.convert(amount, from_currency, to_currency)
+    converted = c.convert(from_currency, to_currency, amount)
     print(f"\n{amount:.2f} {from_currency} <==> {converted:.2f} {to_currency}")
 except Exception as e:
     print(f"\nError during conversion: {e}")
