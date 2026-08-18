@@ -1,4 +1,4 @@
-from forex_python.converter import CurrencyRates
+from forex_python.converter import CurrencyRates #pip install forex-python
 print("********************************")
 print("**Unit_Converterers_Currencies**")
 print("********************************")
